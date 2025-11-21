@@ -23,7 +23,7 @@
 ###< symfony/phpunit-bridge ###
 
 ###> symfony/maker-bundle ###
-/config/bundles.php
+# /config/bundles.php - commented out, needed for Railway deployment
 ###< symfony/maker-bundle ###
 
 ###> sass ###
