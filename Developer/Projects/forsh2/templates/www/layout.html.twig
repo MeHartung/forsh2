@@ -1,0 +1,15 @@
+{% extends '/www/base.html.twig' %}
+
+{% block meta %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+{% endblock %}
+
+{% block body %}
+    {{ include('/www/header.html.twig') }}
+    <main>
+        {% block main %}
+
+        {% endblock %}
+    </main>
+    {{ include('/www/footer.html.twig') }}
+{% endblock %}

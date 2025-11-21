@@ -1,0 +1,316 @@
+<footer class="footer bg-quad-paper small text-center text-md-start" id="page-footer">
+    <div class="container px-4 px-lg-5 pt-4 pt-lg-5">
+
+        <div class="col pb-5 pe-xl-1 d-xl-none">
+            <a
+                href="/#page-top"
+                data-track-click-event-Label="page-top via logo"
+                data-track-click-event-category="footer-navi"
+                title="{{ title }}"
+            >
+                <svg fill="currentColor">
+                    <use xlink:href="{{ asset('images/forschungsmittel_com_logo_serif.svg') }}#logo"></use>
+                </svg>
+            </a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 gx-0 justify-content-center">
+            <div class="col pe-lg-1 d-none d-xl-block">
+                <a
+                    href="/#page-top"
+                    data-track-click-event-Label="page-top via logo"
+                    data-track-click-event-category="footer-navi"
+                    title="{{ title }}"
+                >
+                    <svg fill="currentColor">
+                        <use xlink:href="{{ asset('images/forschungsmittel_com_logo_serif.svg') }}#logo"></use>
+                    </svg>
+                </a>
+
+                <div class="social-media mt-5">
+                    {#
+                    <a
+                        href="https://twitter.com/forschungsmittel.com"
+                        target="_blank"
+                        title="Twitter/X-Profil von Forschungsmittel.com Partnerschaft"
+                        class="me-3"
+                    ><i class="bi bi-twitter-x"></i></a>
+                    <a
+                        href="https://www.facebook.com/forschungsmittel.com"
+                        target="_blank"
+                        title="Facebook-Profil von Forschungsmittel.com Partnerschaft"
+                        class="mx-3"
+                    ><i class="bi bi-facebook"></i></a>
+                    #}
+                    <a
+                        href="https://www.linkedin.com/company/forschungsmittel-com/"
+                        title="LinkedIn-Profil von Forschungsmittel.com Partnerschaft"
+                        target="_blank"
+                        class="ms-3"
+                    ><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="col pe-lg-1 d-none d-xl-block"></div>
+
+            {% for item in menu.footer %}
+                {% if item.children is defined %}
+                    <div class="col pb-5 px-1">
+                        <div class="h5">{{ item.name }}</div>
+                        <ul class="list-unstyled">
+
+                            {% for childItem in item.children %}
+                                <li>
+                                    <a
+                                        class="text-decoration-none text-body"
+                                        data-track-click-event-Label="{{ item.name }} / {{ childItem.name }}"
+                                        data-track-click-event-category="footer-navi"
+                                        href="{{ childItem.url }}"
+                                    >
+                                        {{ childItem.name }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% else %}
+                    <div class="col pb-5 px-1">
+                        <div class="h5">
+                            <a
+                                class="text-decoration-none text-body"
+                                data-track-click-event-Label="{{ item.name }}"
+                                data-track-click-event-category="footer-navi"
+                                href="{{ item.url }}"
+                                {# {{ with .Title }}title='{{ . }}' aria-label='{{ . }}'{{ end }}  #}
+                            >
+                                {{ item.name }}
+                            </a>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container px-4 px-lg-5">
+        <div class="row row-cols-1 row-cols-sm-2 gx-0">
+            <div class="col pb-5 px-1">
+                {{ "now" | date("Y") }} &copy; Forschungsmittel.com Partnerschaft
+            </div>
+            <div class="col pb-5 px-1 text-end">
+                <a
+                    data-bs-toggle="modal"
+                    data-track-click-event-Label="Impressum"
+                    data-track-click-event-category="footer-navi"
+                    href="#impressum-modal"
+                    class="px-3"
+                >Impressum</a>
+                <a
+                    data-bs-toggle="modal"
+                    data-track-click-event-Label="Datenschutzerklärung"
+                    data-track-click-event-category="footer-navi"
+                    href="#datenschutz-modal"
+                    class="px-3"
+                >Datenschutzerklärung</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Impressum as Modal -->
+<div class="modal" id="impressum-modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="impressum-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="impressum-modal-label">Impressum</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2 class="fs-4">Angaben gemäß § 5 TMG</h2>
+                <p>
+                    Forschungsmittel.com Partnerschaft<br>
+                    Goethestr. 13<br>
+                    24116 Kiel
+                </p>
+
+                <h3>Kontakt</h3>
+                <p>
+                    Telefon: <a href="tel:+491724722620">0172 4722620</a><br>
+                    E-Mail: <a href="mailto:info@forschungsmittel.com">info@forschungsmittel.com</a>
+                </p>
+
+                <h3>Vertreten durch:</h3>
+                <p>
+                    Jan Hangele und Benjamin Radermacher
+                </p>
+
+                <h3>Registereintrag:</h3>
+                <p>
+                    Eingetragen im Partnerschaftsregister: Kiel<br>
+                    Registernummer: PR 931 KI
+                </p>
+                {#
+
+                <h3>Umsatzsteuer-ID:</h3>
+                <p>
+                Umsatzsteuer-Identifikationsnummer nach §27a Umsatzsteuergesetz: 1234
+                </p>
+                #}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Datenschutz as Modal -->
+<div class="modal" id="datenschutz-modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="datenschutz-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="datenschutz-modal-label">Datenschutzerklärung</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                Die Nutzung dieser Website kann mit der Verarbeitung von personenbezogenen Daten verbunden sein.
+                Personenbezogene Daten sind alle Daten, die auf Sie persönlich beziehbar sind, z.B. Name, Adresse,
+                E-Mail-Adressen, Nutzerverhalten. Damit diese Verarbeitungen für Sie nachvollziehbar sind, möchten wir
+                Ihnen mit den folgenden Informationen einen Überblick zu diesen Verarbeitungen verschaffen.
+                Um eine faire Verarbeitung zu gewährleisten, möchten wir Sie außerdem über Ihre Rechte nach der
+                Europäischen Datenschutz-Grundverordnung (DSGVO) und dem Bundesdatenschutzgesetz (BDSG) informieren.
+                Wenn Sie Fragen oder Anregungen zu diesen Informationen haben oder sich wegen der Geltendmachung Ihrer
+                Rechte an uns wenden möchten, richten Sie Ihre Anfrage bitte an:
+
+                Benjamin Radermacher, Krausenstr. 23 in 10117 Berlin
+
+                info@forschungsmittel.com
+
+                Datenschutzbeauftragter ist unter denselben Kontaktdaten zu erreichen.
+                </p>
+
+                <h2>Allgemeine Angaben zur Datenverarbeitung</h2>
+                <p>
+                Wir verarbeiten personenbezogene Daten unter Beachtung der einschlägigen Datenschutzvorschriften,
+                insbesondere der DSGVO und des BDSG. Eine Datenverarbeitung durch uns findet nur auf der Grundlage einer
+                gesetzlichen Erlaubnis statt. Bei der Nutzung dieser Website verarbeiten wir personenbezogene Daten nur
+                mit Ihrer Einwilligung (Art. 6 Abs. 1 Buchst. a) DSGVO), zur Erfüllung eines Vertrags, dessen
+                Vertragspartei Sie sind, oder auf Ihre Anfrage zur Durchführung vorvertraglicher Maßnahmen
+                (Art. 6 Abs. 1 Buchst. b) DSGVO), zur Erfüllung einer rechtlichen Verpflichtung (Art. 6 Abs. 1 Buchst. c) DSGVO)
+                oder wenn die Verarbeitung zu Wahrung unser berechtigten Interessen oder den berechtigten Interessen
+                eines Dritten erforderlich ist, sofern nicht Ihre Interessen oder Grundrechte und Grundfreiheiten,
+                die den Schutz personenbezogener Daten erfordern, überwiegen (Art. 6 Abs. 1 Buchst. f) DSGVO).
+                Bei der informatorischen Nutzung der Website, also der bloßen Betrachtung ohne eine Registrierung und
+                ohne, dass Sie uns anderweitig Informationen mitteilen, verarbeiten wir die personenbezogenen Daten, die
+                Ihr Browser an unseren Server übermittelt. Die nachfolgend beschriebenen Daten sind für uns technisch
+                erforderlich, um Ihnen unsere Website anzuzeigen und die Stabilität und Sicherheit zu gewährleisten und
+                müssen daher von uns verarbeitet werden. Rechtsgrundlage ist Art. 6 Abs. 1 Buchst. f) DSGVO:
+                <ul>
+                    <li>IP-Adresse</li>
+                    <li>Datum und Uhrzeit der Anfrage</li>
+                    <li>Zeitzonendifferenz zur Greenwich Mean Time (GMT)</li>
+                    <li>Inhalt der Anforderung (besuchte Seite)</li>
+                    <li>Zugriffsstatus/HTTP-Statuscode</li>
+                    <li>jeweils übertragene Datenmenge</li>
+                    <li>vorher besuchte Seite</li>
+                    <li>Browser</li>
+                    <li>Betriebssystem</li>
+                    <li>Sprache und Version der Browsersoftware.</li>
+                </ul>
+                Bei Ihrer Kontaktaufnahme mit uns per E-Mail oder über ein Kontaktformular werden die von Ihnen
+                mitgeteilten Daten (Ihre E-Mail-Adresse, ggf. Ihr Name und Ihre Telefonnummer) von uns gespeichert, um
+                Ihre Fragen zu beantworten. Die in diesem Zusammenhang anfallenden Daten löschen wir, falls die Anfrage
+                einem Vertrag zugeordnet wird, nach den Fristen zur Vertragslaufzeit, ansonsten nachdem die Speicherung
+                nicht mehr erforderlich ist, oder schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen.
+                </p>
+
+                <h2>Dauer der Speicherung</h2>
+                <p>
+                Sofern sich aus den folgenden Hinweisen nichts anderes ergibt, speichern wir die Daten nur so lange,
+                wie es zur Erreichung des Verarbeitungszwecks oder für die Erfüllung unserer vertraglichen oder
+                gesetzlichen Pflichten erforderlich ist. Solche gesetzlichen Aufbewahrungspflichten können sich
+                insbesondere aus handels- oder steuerrechtlichen Vorschriften ergeben.
+                </p>
+
+                <h2>Verarbeitung von Server-Log-Files</h2>
+                <p>
+                Bei der rein informativen Nutzung unserer Website werden zunächst automatisiert (also nicht über eine
+                Registrierung) allgemeine Informationen gespeichert, die Ihr Browser an unseren Server übermittelt.
+                Hierzu zählen standardmäßig: Browsertyp/ -version, verwendetes Betriebssystem, aufgerufene Seite, die
+                zuvor besuchte Seite (Referrer URL), IP-Adresse, Datum und Uhrzeit der Serveranfrage und HTTP-Statuscode.
+                Die Verarbeitung erfolgt zur Wahrung unserer berechtigten Interessen und beruht auf der Rechtsgrundlage
+                des Art. 6 Abs. 1 Buchst. f) DSGVO. Diese Verarbeitung dient der technischen Verwaltung und der Sicherheit
+                der Website. Die gespeicherten Daten werden gelöscht, wenn nicht aufgrund konkreter Anhaltspunkte ein
+                berechtigter Verdacht auf eine rechtswidrige Nutzung besteht und eine weitere Prüfung und Verarbeitung
+                der Informationen aus diesem Grund erforderlich ist.
+                </p>
+
+                <h2>Datenverarbeitung durch Nutzerangaben</h2>
+                <p>
+                Unsere Website enthält ein Kontaktformular, über welches Sie uns Nachrichten schicken können. Der
+                Transfer Ihrer Daten erfolgt dabei verschlüsselt (zu erkennen an dem „https“ in der Adresszeile des Browsers).
+                Wenn Sie ein Angebot anfordern, benötigen wir den Namen Ihres Unternehmens, Ihren Namen, eine E-Mail-Adresse
+                und den Nachrichtentext für die Prüfung und Beantwortung der Anfrage. Die Angabe einer Website und Ihrer
+                Telefonnummer sind freiwillig. Sie können uns alternativ auch über die Kontakt-E-Mail eine Nachricht
+                schicken. Wir verarbeiten die Daten zu dem Zweck, Ihre Anfrage zu beantworten. Sofern sich Ihre Anfrage
+                auf den Abschluss oder die Durchführung eines Vertrages mit uns richtet, ist Art. 6 Abs. 1 Buchst. b)
+                DSGVO Rechtsgrundlage für die Datenverarbeitung. Ansonsten verarbeiten wir die Daten aufgrund unseres
+                berechtigten Interesses, mit anfragenden Personen in Kontakt zu treten. Rechtsgrundlage für die
+                Datenverarbeitung ist dann Art. 6 Abs. 1 Buchst. f) DSGVO. Bei Ihrer Kontaktaufnahme mit uns per E-Mail
+                oder über ein Kontaktformular werden die von Ihnen mitgeteilten Daten (Ihre E-Mail-Adresse, ggf. Ihr Name
+                und Ihre Telefonnummer) von uns lediglich gespeichert, um Ihre Fragen zu beantworten. Die in diesem
+                Zusammenhang anfallenden Daten löschen wir, falls die Anfrage einem Vertrag zugeordnet wird, nach den
+                Fristen zur Vertragslaufzeit, ansonsten nachdem die Speicherung nicht mehr erforderlich ist, oder
+                schränken die Verarbeitung ein, falls gesetzliche Aufbewahrungspflichten bestehen.
+                </p>
+
+                <h2>Cookies</h2>
+                <p>
+                Wir verwenden auf unserer Website Cookies. Bei Cookies handelt es sich um kleine Textdateien, die durch
+                Ihren Browser gespeichert werden, wenn Sie eine Website besuchen. Hierdurch wird der verwendete Browser
+                gekennzeichnet und kann durch unseren Webserver wiedererkannt werden. Dabei verwenden wir insbesondere
+                dauerhafte Cookies („Persistent Cookies“) für die Analyse unserer Website. Diese Cookies werden
+                automatisiert nach einer vorgegebenen Dauer gelöscht, die sich je nach Cookie unterscheiden kann. Wir
+                verwenden auch sogenannte „Session-Cookies“, die beim Beenden der Browsersitzung wieder gelöscht werden.
+                Sofern es durch diese Verwendung von Cookies zu einer Verarbeitung personenbezogener Daten kommt, beruht
+                diese auf der Rechtsgrundlage des Art. 6 Abs. 1 Buchst. f) DSGVO. Diese Verarbeitung dient unserem
+                berechtigten Interesse, unsere Website nutzerfreundlicher, effektiver sowie sicherer zu machen. Sie können
+                die Cookies in den Sicherheitseinstellungen Ihres Browsers jederzeit löschen. Sie können der Verwendung
+                von Cookies durch Ihre Browsereinstellungen grundsätzlich widersprechen. Weitere Informationen hierzu
+                bietet Ihnen das Bundesamt für Sicherheit in der Informationstechnik.
+                </p>
+
+                <h2>Ihre Rechte</h2>
+                <p>
+                Als betroffene Person haben Sie das Recht, uns gegenüber Ihre Betroffenenrechte geltend zu machen.
+                Dabei haben Sie insbesondere die folgenden Rechte:
+                <ul>
+                    <li>
+                        Sie haben nach Maßgabe des Art.15 DSGVO und § 34 BDSG das Recht, Auskunft darüber zu verlangen,
+                        ob und gegebenenfalls in welchen Umfang wir personenbezogene Daten zu Ihrer Person verarbeiten oder nicht.
+                    </li>
+                    <li>Sie haben das Recht, nach Maßgabe des Art. 16 DSGVO von uns die Berichtigung Ihrer Daten zu verlangen.</li>
+                    <li>Sie haben das Recht, nach Maßgabe des Art. 17 DSGVO und § 35 BDSG von uns die Löschung Ihrer personenbezogenen Daten zu verlangen.</li>
+                    <li>Sie haben das Recht, nach Maßgabe des Art. 18 DSGVO die Verarbeitung Ihrer personenbezogenen Daten einschränken zu lassen.</li>
+                    <li>
+                        Sie haben das Recht, nach Maßgabe des Art. 20 DSGVO die Sie betreffenden personenbezogenen Daten,
+                        die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format
+                        zu erhalten, und diese Daten einem anderen Verantwortlichen zu übermitteln.
+                    </li>
+                    <li>
+                        Sie haben nach Maßgabe des Art. 21 Abs. 1 DSGVO das Recht, gegen jede Verarbeitung, die auf der
+                        Rechtsgrundlage des Art. 6 Abs. 1 Buchst. e) oder f) DSGVO beruht, Widerspruch einzulegen.
+                        Sofern durch uns personenbezogene Daten über Sie zum Zweck der Direktwerbung verarbeitet werden,
+                        können Sie gegen diese Verarbeitung gem. Art. 21 Abs. 2 und Abs. 3 DSGVO Widerspruch einlegen.
+                    </li>
+                </ul>
+                Sofern Sie uns eine gesonderte Einwilligung in die Datenverarbeitung erteilt haben, können Sie diese
+                Einwilligung nach Maßgabe des Art. 7 Abs. 3 DSGVO jederzeit widerrufen. Durch einen solchen Widerruf wird
+                die Rechtmäßigkeit der Verarbeitung, die bis zum Widerruf aufgrund der Einwilligung erfolgt ist, nicht berührt.
+                Wenn Sie der Ansicht sind, dass eine Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die
+                Bestimmungen der DSGVO verstößt, haben Sie nach Maßgabe des Art. 77 DSGVO das Recht auf Beschwerde bei einer Aufsichtsbehörde.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

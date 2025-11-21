@@ -1,0 +1,87 @@
+<section id="Kontakt" class="contact position-relative bg-gradient-rtl">
+    <div class="container px-4 px-lg-5 py-4 py-lg-5">
+        <div class="row align-items-center">
+            <div class="col-12 col-xl-7 mb-4">
+                <h2 class="text-dark display-4 fw-bold">
+                    Bei Fragen, zögern Sie nicht, uns zu kontaktieren!
+                </h2>
+                <p class="fs-5">
+                    Tel.: <a href="tel:+491724722620">+49 (0) 172-4722620</a>
+                </p>
+                <p class="fs-5">
+                    E-Mail: <a href="mailto:info@forschungsmittel.com">info@forschungsmittel.com</a>
+                </p>
+            </div>
+
+            <div class="col-12 col-xl-5">
+                <form class="p-3 p-md-5 mx-0 mx-lg-5 mx-xl-0 position-relative" name="contact" id="form.contact">
+                    <div class="row mb-3">
+                        <h2 class="text-dark display-6 fw-bold">Wir freuen uns über Ihre Nachricht.</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-xl-12 col-xxl-6 mb-3">
+                            <label class="visually-hidden" for="contact-first-name">Vorname</label>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <input type="text" class="form-control" id="contact-first-name" placeholder="Vorname" autocomplete="given-name">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-xl-12 col-xxl-6 mb-3">
+                            <label class="visually-hidden" for="contact-last-name">Nachname</label>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                <input type="text" class="form-control" id="contact-last-name" placeholder="Nachname" autocomplete="family-name">
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label class="visually-hidden" for="contact-email">E-Mail*</label>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <i class="bi bi-at"></i>
+                                </div>
+                                <input type="email" class="form-control" id="contact-email" placeholder="E-Mail*" autocomplete="email" required>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label class="visually-hidden" for="contact-phone">Telefon</label>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+                                <input type="tel" class="form-control" id="contact-phone" placeholder="Telefon" autocomplete="tel">
+                            </div>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label class="visually-hidden" for="contact-message">Nachricht*</label>
+                            <div class="input-group">
+                                <div class="input-group-text">
+                                    <i class="bi bi-chat-left-text"></i>
+                                </div>
+                                <textarea class="form-control" id="contact-message" placeholder="Nachricht*" rows="3" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="contact-alert" class="alert alert-warning d-none" role="alert">
+                        Es ist ein Fehler aufgetreten. Bite versuchen Sie es erneut.
+                    </div>
+                    <div id="contact-success" class="d-none position-absolute top-0 start-0 bottom-0 end-0">
+                        <div class="position-absolute top-50 start-50 translate-middle" role="alert">
+                            <p><strong>Vielen Dank.</strong></p>
+                            <p>Wir haben Ihre Anfrage erhalten und werden uns so schnell wie möglich mit Ihnen in Verbindung setzen..</p>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Absenden</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,100 @@
+@import "fonts.scss";
+
+$font-family-secondary:
+    Montserrat,
+    // Cross-platform generic font family (default user interface font)
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    "Segoe UI",
+    // Android
+    Roboto,
+    // older macOS and iOS
+    "Helvetica Neue",
+    // Linux
+    "Noto Sans",
+    "Liberation Sans",
+    // Basic web fallback
+    Arial,
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+@media (min-width: 1600px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+        max-width: 1460px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.text-h1, .text-h2, .text-h3, .text-h4, .text-h5, .text-h6,
+.text-subtitle1, .text-subtitle2 {
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+@media (min-width: 576px) {
+    .w-sm-50 {
+        width: 50% !important;
+    }
+
+    .w-sm-75 {
+        width: 75% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .w-md-50 {
+        width: 50% !important;
+    }
+
+    .w-md-75 {
+        width: 75% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .w-lg-50 {
+        width: 50% !important;
+    }
+
+    .w-lg-75 {
+        width: 75% !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .w-xl-50 {
+        width: 50% !important;
+    }
+
+    .w-xl-75 {
+        width: 75% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .w-xxl-50 {
+        width: 50% !important;
+    }
+
+    .w-xxl-75 {
+        width: 75% !important;
+    }
+}
+
+.lh-xl {
+    line-height: 2.5 !important;
+}
+
+.lh-xxl {
+    line-height: 3 !important;
+}
+
+svg.fmi {
+    width: 1rem;
+    height: 1rem;
+}
