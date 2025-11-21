@@ -8,6 +8,10 @@
 /vendor/
 ###< symfony/framework-bundle ###
 
+###> Railway ###
+.railway/
+###< Railway ###
+
 ###> phpunit/phpunit ###
 /phpunit.xml
 .phpunit.result.cache
