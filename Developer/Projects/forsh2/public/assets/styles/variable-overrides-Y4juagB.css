@@ -1,0 +1,47 @@
+// Default variable overrides
+
+$american-blue: #40356f;
+$slate-blue: #645fce;
+
+// Set the default font-family
+$font-family-base:
+    Uniform,
+    // Cross-platform generic font family (default user interface font)
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    "Segoe UI",
+    // Android
+    Roboto,
+    // older macOS and iOS
+    "Helvetica Neue",
+    // Linux
+    "Noto Sans",
+    "Liberation Sans",
+    // Basic web fallback
+    Arial,
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// scss-docs-start theme-color-variables
+$primary:   $slate-blue;
+$secondary:     $american-blue;           // A slightly warmer, muted gray that complements blue
+$success:       #5cb85c;           // A slightly desaturated green that works with blue tones
+$info:          #5bc0de;           // A softer, more muted cyan that harmonizes with blue
+$warning:       #f0ad4e;           // A slightly less saturated yellow/amber
+$danger:        #d9534f;           // A slightly less vibrant red
+$light:         #e9ecef;           // A very light gray with a hint of warmth
+$dark:          #23272b;           // A very dark, almost black gray
+// scss-docs-end theme-color-variables
+
+$light-background: #e0dff5;
+
+// Your variable overrides
+$body-bg: #fff;
+$body-color: $dark;
+
+// Enables predefined border-radius styles on various components.
+$enable-rounded: false;
