@@ -1,0 +1,19 @@
+parameters:
+    parallel:
+        maximumNumberOfProcesses: 1
+    level: 9
+    type_coverage:
+        return: 100
+        param: 100
+        property: 100
+        declare: 100
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - bin/
+        - config/
+        - public/
+        - src/
+        - tests/
+    excludePaths:
+        - config/secrets/**
+        - tests/bootstrap.php
