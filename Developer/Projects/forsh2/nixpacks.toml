@@ -17,6 +17,7 @@ cmds = [
   "php /usr/local/bin/composer install --no-dev --optimize-autoloader --no-scripts",
   "mkdir -p var/cache var/log",
   "php bin/console sass:build --env=prod --no-debug",
+  "php bin/console asset-map:compile --env=prod --no-debug",
   "php bin/console cache:clear --env=prod --no-debug || true"
 ]
 
