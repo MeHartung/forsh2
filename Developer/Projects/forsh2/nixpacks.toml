@@ -14,7 +14,7 @@ aptPkgs = [
 
 cmds = [
   "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer",
-  "php /usr/local/bin/composer install --no-dev --optimize-autoloader"
+  "php /usr/local/bin/composer install --no-dev --optimize-autoloader --no-scripts"
 ]
 
 [start]
